@@ -1,0 +1,7 @@
+// backend/api.php
+session_start();
+if ($_GET['action'] == 'login') {
+$db = new SQLite3('db.sqlite');
+$stmt = $db->prepare('SELECT * FROM users WHERE email = :email AND password = :pass');
+// Bind params, check user, set session
+}

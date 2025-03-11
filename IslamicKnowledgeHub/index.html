@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Islamic Knowledge Hub - A Tribute to Ahlulbayt (AS)">
+    <title>Islamic Knowledge Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto_Naskh_Arabic&family=Amiri&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="font-['Roboto','Noto_Naskh_Arabic','Amiri'] transition-colors duration-300">
+    <!-- Navigation (Sticky with Toggle Button) -->
+    <nav class="bg-accent text-text-inverted p-4 sticky top-0 z-20 shadow-lg">
+        <div class="flex flex-wrap justify-between items-center max-w-6xl mx-auto">
+            <ul class="flex flex-wrap space-x-6 md:space-x-8">
+                <li><a href="index.html" class="hover:text-background transition">Home</a></li>
+                <li><a href="books.html" class="hover:text-background transition">Books</a></li>
+                <li><a href="qna.html" class="hover:text-background transition">Q&A</a></li>
+                <li><a href="references.html" class="hover:text-background transition">References</a></li>
+                <li><a href="admin.html" class="hover:text-background transition">Admin</a></li>
+                <!-- <li><a href="login.html" class="hover:text-background transition">Login/Register</a></li> -->
+            </ul>
+            <button id="theme-toggle"
+                class="p-2 bg-primary text-text-inverted rounded-full hover:bg-accent-dark transition">
+                🌙
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] flex items-center justify-center bg-background text-primary overflow-hidden">
+        <!-- Background Image with Gradient Overlay -->
+        <div class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('images/hero-1.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-b from-accent/30 to-background/90"></div>
+        </div>
+        <!-- Main Content Container -->
+        <div class="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-4xl mx-auto">
+            <!-- Title -->
+            <h1
+                class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 animate-fade-in font-amiri text-primary">
+                Welcome to Islamic Knowledge Hub
+            </h1>
+            <!-- Islamic Quote -->
+            <p class="text-lg sm:text-xl md:text-2xl italic text-secondary mb-6 animate-fade-in delay-200 font-amiri">
+                "Seek knowledge from the cradle to the grave." – Imam Ali (AS)
+            </p>
+            <!-- Search Bar -->
+            <div class="flex justify-center mb-8 animate-fade-in delay-400">
+                <input type="text" placeholder="Search books, Q&A, references..."
+                    class="w-full sm:w-3/4 md:w-2/3 p-3 rounded-l-lg border border-secondary/50 bg-card text-primary focus:outline-none focus:ring-2 focus:ring-accent shadow-sm">
+                <button class="p-3 bg-accent text-text-inverted rounded-r-lg hover:bg-accent-dark transition">
+                    Search
+                </button>
+            </div>
+            <!-- Call-to-Action Button -->
+            <a href="books.html"
+                class="inline-block px-6 py-3 bg-primary text-text-inverted rounded-lg shadow hover:bg-accent transition animate-fade-in delay-600">
+                Explore Books
+            </a>
+        </div>
+    </section>
+
+<section id="daily-reflection">
+    <h2>Daily Reflection Corner</h2>
+    <div id="reflection-box">
+        <p id="hadith">Click below to reveal today's reflection.</p>
+        <p id="explanation" style="display:none;"></p>
+        <p id="prompt" style="display:none;"></p>
+        <button id="reveal-btn">Reveal Today's Reflection</button>
+    </div>
+    <a href="/reflections-archive">View Past Reflections</a>
+</section>
+
+    <!-- 12 Imams of Shia Section -->
+    <section class="py-16 px-4 sm:px-6 md:px-8 bg-background transition-colors duration-300">
+        <!-- Section Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary animate-fade-in font-amiri">
+                The 12 Imams of Shia – Our Guiding Lights
+            </h2>
+            <p class="mt-3 text-lg sm:text-xl text-secondary animate-fade-in delay-200 font-amiri">
+                "The Imams are the lanterns of guidance and the ships of salvation." – Prophet Muhammad (PBUH)
+            </p>
+        </div>
+
+        <!-- Imams Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
+            <!-- Imam Card 1 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Ali (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Gate of Knowledge, The Soul of the Prophet</p>
+                <a href="books.html?category=imam-ali"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Discover
+                    His Wisdom</a>
+            </div>
+            <!-- Imam Card 2 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Hassan (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Generous Prince of Peace</p>
+                <a href="books.html?category=imam-hassan"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Explore
+                    His Grace</a>
+            </div>
+            <!-- Imam Card 3 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Hussain (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Martyr of Karbala, The Soul of Sacrifice</p>
+                <a href="books.html?category=imam-hussain"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Honor
+                    His Legacy</a>
+            </div>
+            <!-- Imam Card 4 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Sajjad (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Master of Supplication</p>
+                <a href="books.html?category=imam-sajjad"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Feel
+                    His Prayers</a>
+            </div>
+            <!-- Imam Card 5 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Baqir (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Revealer of Divine Knowledge</p>
+                <a href="books.html?category=imam-baqir"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Learn
+                    His Truths</a>
+            </div>
+            <!-- Imam Card 6 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Sadiq (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Founder of Shia Jurisprudence</p>
+                <a href="books.html?category=imam-sadiq"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Embrace
+                    His Light</a>
+            </div>
+            <!-- Imam Card 7 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Kadhim (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Patient Soul in Chains</p>
+                <a href="books.html?category=imam-kadhim"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Know
+                    His Patience</a>
+            </div>
+            <!-- Imam Card 8 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Reza (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Guarantor of Paradise</p>
+                <a href="books.html?category=imam-reza"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Visit
+                    His Shrine</a>
+            </div>
+            <!-- Imam Card 9 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Taqi (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Generous Youth of Faith</p>
+                <a href="books.html?category=imam-taqi"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Seek
+                    His Mercy</a>
+            </div>
+            <!-- Imam Card 10 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Naqi (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Pure Guide of the Ummah</p>
+                <a href="books.html?category=imam-naqi"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Follow
+                    His Path</a>
+            </div>
+            <!-- Imam Card 11 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Askari (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Beacon in Darkness</p>
+                <a href="books.html?category=imam-askari"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Find
+                    His Light</a>
+            </div>
+            <!-- Imam Card 12 -->
+            <div
+                class="relative p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 animate-fade-in delay-400">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary rounded-t-xl">
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Imam Mahdi (AS)</h3>
+                <p class="text-secondary mt-2 text-sm sm:text-base">The Awaited Savior of Humanity</p>
+                <a href="books.html?category=imam-mahdi"
+                    class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-primary transition font-amiri">Await
+                    His Return</a>
+            </div>
+        </div>
+
+        <!-- Call-to-Action -->
+        <div class="text-center mt-12">
+            <a href="books.html?category=12-imams"
+                class="inline-block px-6 py-3 bg-primary text-text-inverted rounded-lg shadow-lg hover:bg-accent transition animate-fade-in delay-600 font-amiri text-lg sm:text-xl">
+                Dive into the Ocean of Their Knowledge
+            </a>
+        </div>
+    </section>
+
+<!-- Important Shia Books Section -->
+<section class="important-shia-books py-16 px-4 sm:px-6 md:px-8 bg-background relative overflow-hidden">
+    <!-- Islamic Pattern Background -->
+    <div
+        class="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Islamic+Pattern')] bg-cover bg-center opacity-10">
+    </div>
+
+    <!-- Section Heading -->
+    <div class="text-center mb-12 relative z-10">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary font-amiri mb-4 animate-fade-in-up">
+    Important Shia Books
+</h2>
+        <p class="mt-3 text-lg sm:text-xl text-secondary font-amiri">
+            "The ink of a scholar is holier than the blood of a martyr." – Prophet Muhammad (SAW)
+        </p>
+    </div>
+
+    <!-- Books Carousel -->
+    <div class="swiper-container relative z-10 max-w-6xl mx-auto">
+        <div class="swiper-wrapper">
+            <!-- Book 1 -->
+            <div class="swiper-slide">
+                <div
+                    class="book-card p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="images/kaba.jpg" alt="Nahj al-Balagha"
+                        class="w-full h-64 object-cover rounded-t-xl">
+                    <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Nahj al-Balagha</h3>
+                    <p class="text-secondary mt-2 text-sm sm:text-base">Sermons, letters, and sayings of Imam Ali (AS).
+                    </p>
+                    <a href="books.html?book=nahj-al-balagha"
+                        class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-accent-dark transition font-amiri">Discover
+                        More</a>
+                </div>
+            </div>
+            <!-- Book 2 -->
+            <div class="swiper-slide">
+                <div
+                    class="book-card p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="images/sahifa.jpg" alt="Sahifa Sajjadiya"
+                        class="w-full h-64 object-cover rounded-t-xl">
+                    <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Sahifa Sajjadiya</h3>
+                    <p class="text-secondary mt-2 text-sm sm:text-base">Supplications of Imam Sajjad (AS), a treasure of
+                        spirituality.</p>
+                    <a href="books.html?book=sahifa-sajjadiya"
+                        class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-accent-dark transition font-amiri">Read
+                        Prayers</a>
+                </div>
+            </div>
+            <!-- Book 3 -->
+            <div class="swiper-slide">
+                <div
+                    class="book-card p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="images/al-kafi.jpg" alt="Al-Kafi"
+                        class="w-full h-64 object-cover rounded-t-xl">
+                    <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Al-Kafi</h3>
+                    <p class="text-secondary mt-2 text-sm sm:text-base">Collection of hadiths by Sheikh Kulayni.</p>
+                    <a href="books.html?book=al-kafi"
+                        class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-accent-dark transition font-amiri">Explore
+                        Hadiths</a>
+                </div>
+            </div>
+            <!-- Book 4 -->
+            <div class="swiper-slide">
+                <div
+                    class="book-card p-6 bg-card rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="images/imam-mehdi.jpg" alt="Tafsir al-Mizan"
+                        class="w-full h-64 object-cover rounded-t-xl">
+                    <h3 class="text-xl sm:text-2xl font-bold text-primary mt-4 font-amiri">Tafsir al-Mizan</h3>
+                    <p class="text-secondary mt-2 text-sm sm:text-base">Quranic exegesis by Allama Tabatabai.</p>
+                    <a href="books.html?book=tafsir-al-mizan"
+                        class="mt-4 inline-block px-4 py-2 bg-accent text-text-inverted rounded-lg hover:bg-accent-dark transition font-amiri">Study
+                        Tafsir</a>
+                </div>
+            </div>
+        </div>
+        <!-- Pagination and Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Call-to-Action -->
+    <div class="text-center mt-12 relative z-10">
+        <a href="books.html?category=shia-books"
+            class="inline-block px-6 py-3 bg-primary text-text-inverted rounded-lg shadow-lg hover:bg-accent transition font-amiri text-lg sm:text-xl">
+            Browse All Shia Books
+        </a>
+    </div>
+</section>
+
+    <!-- 5. Recent Q&A -->
+    <section class="py-12 px-4 bg-beige">
+        <h2 class="text-3xl font-semibold text-center text-dark-blue">Recent Q&A</h2>
+        <p class="text-center mt-2 text-gray-600">Latest questions answered by our community.</p>
+        <div id="recent-qna" class="mt-8 max-w-3xl mx-auto space-y-4">
+            <!-- Dynamic content loaded via JS -->
+            <div class="p-4 border rounded-lg shadow">
+                <p class="font-bold">Q: What is the ruling on fasting during travel?</p>
+                <p class="text-gray-600">A: According to Ayatollah Sistani, travelers may break their fast...</p>
+            </div>
+        </div>
+        <p class="text-center mt-6"><a href="qna.html" class="text-green-700 hover:underline">View All Q&A</a></p>
+    </section>
+
+    <!-- 6. Quick Links -->
+    <section class="py-12 px-4 bg-green-700 text-white text-center">
+        <h2 class="text-3xl font-semibold">Explore More</h2>
+        <div class="flex justify-center space-x-8 mt-6">
+            <a href="books.html" class="hover:underline">Books</a>
+            <a href="qna.html" class="hover:underline">Q&A</a>
+            <a href="references.html" class="hover:underline">References</a>
+        </div>
+    </section>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="fixed bottom-4 right-4 p-2 bg-green-700 text-white rounded-lg shadow">Toggle
+        Theme</button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

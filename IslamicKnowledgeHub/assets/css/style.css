@@ -1,0 +1,252 @@
+/* Root Variables for Light Mode */
+:root {
+    --background: #FDF6E3;
+    /* Creamy Beige */
+    --primary: #1B263B;
+    /* Dark Blue */
+    --accent: #2F855A;
+    /* Rich Green */
+    --accent-dark: #8B0000;
+    /* Dark Red */
+    --card: #FFFFFF;
+    /* White */
+    --secondary: #5A6E7A;
+    /* Softer Gray */
+    --text-inverted: #FFFFFF;
+    /* White */
+    --highlight: #D4AF37;
+    /* Gold */
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+    --background: #17152e;
+    /* Dark Blue */
+    --primary: #FDF6E3;
+    /* Creamy Beige */
+    --accent: #2F855A;
+    /* Rich Green */
+    --accent-dark: #FF4500;
+    /* Orange-Red */
+    --card: #313233;
+    /* Darker Gray */
+    --secondary: #8B9AA8;
+    /* Muted Gray */
+    --text-inverted: #1B263B;
+    /* Dark Blue */
+    --highlight: #FFD700;
+    /* Bright Gold */
+}
+/* Base Styles */
+body {
+    font-family: 'Roboto', 'Noto Naskh Arabic', 'Amiri', sans-serif;
+    background-color: var(--background);
+    color: var(--primary);
+}
+
+/* Utility Classes */
+.font-amiri {
+    font-family: 'Amiri', serif;
+}
+
+/* Animation for Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+/* Enhanced Card Styling */
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Specific Component Styles */
+.bg-background {
+    background-color: var(--background);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.bg-card {
+    background-color: var(--card);
+}
+
+.text-text-inverted {
+    color: var(--text-inverted);
+}
+
+.border-secondary\/50 {
+    border-color: rgba(var(--secondary), 0.5);
+}
+
+.focus\:ring-accent {
+    --tw-ring-color: var(--accent);
+}
+
+.hover\:bg-accent-dark:hover {
+    background-color: var(--accent-dark);
+}
+
+
+/* Islamic Pattern Background */
+.important-shia-books {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Book Card Styling */
+.book-card {
+    background-color: var(--card, #ffffff);
+    /* White background for cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.book-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--primary, #FFD700);
+    /* Gold for titles */
+}
+
+.book-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: var(--secondary, #666666);
+    /* Gray for descriptions */
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--accent, #008000);
+    /* Green for buttons */
+    color: var(--text-inverted, #ffffff);
+    /* White text */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: var(--accent-dark, #006400);
+    /* Darker green on hover */
+}
+
+/* Swiper Custom Styles */
+.swiper-container {
+    padding-bottom: 50px;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--accent, #008000);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--accent, #008000);
+}
+
+
+#daily-reflection {
+    text-align: center;
+    padding: 20px;
+    background-color: #F5F5DC;
+    /* Light beige, adjust as needed */
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+h2 {
+    font-family: 'Amiri', serif;
+    color: #1B263B;
+    /* Dark blue */
+}
+
+#reflection-box {
+    margin: 20px 0;
+}
+
+#hadith,
+#explanation,
+#prompt {
+    font-size: 1.1em;
+    color: #2E8B57;
+    /* Sea green */
+}
+
+#reveal-btn {
+    padding: 10px 20px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reveal-btn:hover {
+    background-color: #1B263B;
+}

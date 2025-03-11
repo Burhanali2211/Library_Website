@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Knowledge Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[var(--background)]">
+    <!-- Important Shia Books Section -->
+    <section class="py-16 px-4 sm:px-6 md:px-8 bg-[var(--background)] relative overflow-hidden" data-aos="fade-up">
+        <div
+            class="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Islamic+Pattern')] bg-cover bg-center opacity-10">
+        </div>
+        <div class="text-center mb-12 relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[var(--primary)] font-['Amiri']"
+                data-aos="fade-up">
+                Important Shia Books
+            </h2>
+            <p class="mt-3 text-lg sm:text-xl text-[var(--secondary)] font-['Amiri']" data-aos="fade-up"
+                data-aos-delay="200">
+                "The ink of a scholar is holier than the blood of a martyr." – Prophet Muhammad (SAW)
+            </p>
+        </div>
+        <div class="swiper-container relative z-10 max-w-6xl mx-auto" data-aos="zoom-in">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="book-card p-6 bg-[var(--card)] rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+                        style="background: linear-gradient(to bottom right, #006400, #90EE90);">
+                        <img src="https://via.placeholder.com/200x300?text=Nahj+al-Balagha" alt="Nahj al-Balagha"
+                            class="w-full h-64 object-cover rounded-t-xl">
+                        <h3 class="text-xl sm:text-2xl font-bold text-[var(--primary)] mt-4 font-['Amiri']">Nahj
+                            al-Balagha</h3>
+                        <p class="text-[var(--secondary)] mt-2 text-sm sm:text-base">Sermons, letters, and sayings of
+                            Imam Ali (AS).</p>
+                        <a href="books.html?book=nahj-al-balagha"
+                            class="mt-4 inline-block px-4 py-2 bg-[var(--accent)] text-[var(--text-inverted)] rounded-lg hover:bg-[var(--secondary)] transition font-['Amiri']">Discover
+                            More</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="book-card p-6 bg-[var(--card)] rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+                        style="background: linear-gradient(to bottom right, #00008B, #ADD8E6);">
+                        <img src="https://via.placeholder.com/200x300?text=Sahifa+Sajjadiya" alt="Sahifa Sajjadiya"
+                            class="w-full h-64 object-cover rounded-t-xl">
+                        <h3 class="text-xl sm:text-2xl font-bold text-[var(--primary)] mt-4 font-['Amiri']">Sahifa
+                            Sajjadiya</h3>
+                        <p class="text-[var(--secondary)] mt-2 text-sm sm:text-base">Supplications of Imam Sajjad (AS),
+                            a treasure of spirituality.</p>
+                        <a href="books.html?book=sahifa-sajjadiya"
+                            class="mt-4 inline-block px-4 py-2 bg-[var(--accent)] text-[var(--text-inverted)] rounded-lg hover:bg-[var(--secondary)] transition font-['Amiri']">Read
+                            Prayers</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Daily Quote Section -->
+    <section class="py-12 px-4 sm:px-6 md:px-8 bg-[var(--background)] relative overflow-hidden" data-aos="fade-up">
+        <div
+            class="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Islamic+Pattern')] bg-cover bg-center opacity-10">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-[var(--primary)] font-['Amiri'] mb-4" data-aos="fade-up">
+                Daily Inspiration
+            </h2>
+            <div class="quote-box p-6 bg-[var(--card)] rounded-xl shadow-lg">
+                <p id="daily-quote" class="text-lg sm:text-xl text-[var(--secondary)] font-['Amiri'] italic">
+                    "Loading..."</p>
+                <p id="quote-source" class="text-sm sm:text-base text-[var(--accent)] mt-2 font-['Amiri']">- Prophet
+                    Muhammad (SAW)</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
